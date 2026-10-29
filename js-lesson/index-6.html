@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function add(){
+            console.log('start function...');
+            let op1 = document.getElementById('operand1').value;
+            let op2 = document.getElementById('operand2').value;
+
+            console.log(op1 + op2); // string + string (join)
+
+            op1 = parseFloat(op1); // convert to float
+            op2 = parseFloat(op2); // convert to float
+
+            console.log(op1+op2); // float + float (addition)
+            console.log('end function...');
+        }
+    </script>
+</head>
+<body>
+    <h1>simple-cal</h1>
+    <label>Number 1:</label>
+    <input type="text" id="operand1" />
+    <br>
+    <label>Number 2:</label>
+    <input type="text" id="operand2" />
+    <hr>
+    <button id="plus" onclick="add();">+</button>
+</body>
+</html>
