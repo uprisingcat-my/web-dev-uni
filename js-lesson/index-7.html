@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function check_adult(){
+            console.log('start function...');
+
+            const age = document.getElementById('age').value;
+            if(parseInt(age)>=18){
+                document.getElementById('result').innerHTML = 'an adult';
+            }
+            else{
+                document.getElementById('result').innerHTML = 'not an adult';
+            }
+
+            console.log('start function...');
+        }
+    </script>
+</head>
+<body>
+    <h1>simple-age-verification</h1>
+    <label>Age :</label>
+    <input type="text" id="age" />
+    <button id="check_adult" onclick="check_adult();">check</button>
+    <hr>
+    <label>you are <span id='result'>-</label>
+</body>
+</html>
