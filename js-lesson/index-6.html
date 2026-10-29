@@ -19,6 +19,67 @@
             document.getElementById('answer').innerHTML = op1 + op2;
             console.log('end function...');
         }
+
+            function sub(){
+            console.log('start function...');
+            let op1 = document.getElementById('operand1').value;
+            let op2 = document.getElementById('operand2').value;
+
+            console.log(op1 - op2); // string - string (auto convert)
+
+            op1 = parseFloat(op1); // convert to float
+            op2 = parseFloat(op2); // convert to float
+
+            console.log(op1-op2); // float - float (substraction)
+            document.getElementById('answer').innerHTML = op1 - op2;
+            console.log('end function...');
+        }
+
+            function mul(){
+            console.log('start function...');
+            let op1 = document.getElementById('operand1').value;
+            let op2 = document.getElementById('operand2').value;
+
+            console.log(op1 * op2); // string * string (auto convert)
+
+            op1 = parseFloat(op1); // convert to float
+            op2 = parseFloat(op2); // convert to float
+
+            console.log(op1*op2); // float - float (multiplication)
+            document.getElementById('answer').innerHTML = op1 * op2;
+            console.log('end function...');
+        }
+
+            function div(){
+            console.log('start function...');
+            let op1 = document.getElementById('operand1').value;
+            let op2 = document.getElementById('operand2').value;
+
+            console.log(op1 / op2); // string / string (auto convert)
+
+            op1 = parseFloat(op1); // convert to float
+            op2 = parseFloat(op2); // convert to float
+
+            console.log(op1/op2); // float / float (division)
+            document.getElementById('answer').innerHTML = op1 / op2;
+            console.log('end function...');
+        }
+
+            function mod(){
+            console.log('start function...');
+            let op1 = document.getElementById('operand1').value;
+            let op2 = document.getElementById('operand2').value;
+
+            console.log(op1 % op2); // string % string (auto convert)
+
+            op1 = parseFloat(op1); // convert to float
+            op2 = parseFloat(op2); // convert to float
+
+            console.log(op1%op2); // float % float (modulo operation)
+            document.getElementById('answer').innerHTML = op1 % op2;
+            console.log('end function...');
+        }
+
     </script>
 </head>
 <body>
@@ -30,6 +91,10 @@
     <input type="text" id="operand2" />
     <hr>
     <button id="plus" onclick="add();">+</button>
+    <button id="minus" onclick="sub();">-</button>
+    <button id="multiplication" onclick="mul();">x</button>
+    <button id="division" onclick="div();">÷</button>
+    <button id="division" onclick="mod();">%</button>
     <hr>
     <label>Answer : <span id='answer'>_</span></label>
 </body>
