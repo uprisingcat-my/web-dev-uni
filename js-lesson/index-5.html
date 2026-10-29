@@ -7,15 +7,21 @@
     <script>
         // write a function named calculate_bmi() to accept 2 parameters weight (kg) and height (meter), the formula is bmi=(weight/height^2), calculate and output the value BMI.
         function calculate_bmi(weight, height) {
-            console.log(`BMI = ${weight / (height * height)} kg/squaremeter`);
+            // console.log(`BMI = ${weight / (height * height)} kg/squaremeter`);
+
+            //use a return
+            return (weight / (height * height));
         }
         // here we call the function
-        calculate_bmi(60,1.6);
+        let result = calculate_bmi(60,1.6);
+        console.log(`BMI = ${result} kg/squaremeter`);
         // we can call the function multiple times
         console.log('___1');
-        calculate_bmi(45,1.2)
+        result = calculate_bmi(45,1.2);
+        console.log(`BMI = ${result} kg/squaremeter`);
         console.log('___2');
-        calculate_bmi(50,1.55)
+        result = calculate_bmi(50,1.55);
+        console.log(`BMI = ${result} kg/squaremeter`);
         console.log('___3');
     </script>
 </head>
