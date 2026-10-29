@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        //here the function is defined
+        function logHiss(target){
+            console.log(`Nora-Neko hissed at ${target}`)
+        }
+        //here the function is called
+        logHiss('molly');
+        //we can call the function multiple times
+        console.log("__1");
+        logHiss('labin');
+        console.log("__2");
+        logHiss('suspicious cat');
+        console.log("__3");
+
+        //fuctions that accept 2 parameters
+        function logSlap(firstname,secondname){
+            console.log(`nora-neko slapped ${firstname} ${secondname}`);
+        }
+        //function is called
+        logSlap('molly','scarecrow');
+        //it can be called multiple times
+        console.log("__1");
+        logSlap('labin','bin');
+        console.log("__2");
+        logSlap('sus','cat');
+        console.log("__3");
+
+        //fuctions that accept 2 parameters
+        function logSlap(firstname, secondname, count = 3) {
+            console.log(`nora-neko slapped ${firstname} ${secondname}`);
+            console.log(`they got slapped ${count} times.`)
+        }
+        //function is called
+        logSlap('molly','scarecrow');
+        //it can be called multiple times
+        console.log("__1");
+        logSlap('labin','bin', 999);
+        console.log("__2");
+        logSlap('sus','cat', 1);
+        console.log("__3");
+    </script>
+</head>
+<body>
+    <h1>js-functions-tutorial</h1>
+</body>
+</html>
