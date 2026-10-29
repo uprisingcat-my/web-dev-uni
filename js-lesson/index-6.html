@@ -16,6 +16,7 @@
             op2 = parseFloat(op2); // convert to float
 
             console.log(op1+op2); // float + float (addition)
+            document.getElementById('answer').innerHTML = op1 + op2;
             console.log('end function...');
         }
     </script>
@@ -29,5 +30,7 @@
     <input type="text" id="operand2" />
     <hr>
     <button id="plus" onclick="add();">+</button>
+    <hr>
+    <label>Answer : <span id='answer'>_</span></label>
 </body>
 </html>
