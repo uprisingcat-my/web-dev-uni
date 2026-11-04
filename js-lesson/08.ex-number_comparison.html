@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        // Write a function to retreive 2 numbers from respective textfields, find out the biggest and display in the label.
+        function compare() {
+            console.log('function start...');
+            const num1 = document.getElementById("num1").value;
+            const num2 = document.getElementById("num2").value;
+
+            if(parseFloat(num1) > parseFloat(num2)) {
+                document.getElementById("result").innerHTML = ` ${parseFloat(num1)}`;
+            } else {
+                document.getElementById("result").innerHTML = ` ${parseFloat(num2)}`;
+            }
+            console.log('function end...');
+        }
+    </script>
+</head>
+<body>
+    <h1>simple-number-comparison</h1>
+    <!-- Create 2 textfields and 1 button, display the biggest number in a lable upon clicking the button. -->
+     <label>Number_1: </label>
+     <input type="text" id="num1" />
+     <br>
+     <label>Number_2: </label>
+     <input type="text" id="num2" />
+     <hr>
+     <button onclick="compare();">compare</button>
+     <hr>
+     <label>The biggest number is: <span id="result">-</span></label>
+</body>
+</html>
