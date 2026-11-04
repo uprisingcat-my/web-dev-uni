@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function run() {
+            const numbers = [28, 38, 17, 67, 11, 86, 56, 33];
+            //list the even numbers in the array
+            let i = 0;
+            let count = 0;
+            while ( i < 9) {
+                if (numbers[i]%2 === 0) {
+                    count++;
+                }
+                i++;
+            }
+            console.log(`number of even numbers: ${count}`);
+        }
+        run();
+    </script>
+</head>
+<body>
+    <h1>count-even-numbers</h1>
+</body>
+</html>
