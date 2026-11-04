@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        // write a function to retrieve mark from text field, display the grade in the label based on the table below
+        // below 40 - fail
+        // 40 - 60 - pass
+        // 60 - 70 - credit
+        // 70 or above 70 - distinction
+        function check_result() {
+        console.log('function start...');
+
+        let score = document.getElementById('score').value;
+        // score = parseFloat(score);
+        // since values like 100dd will still be parsed upto 100, parse int was replaced
+        score = +(score);
+        if(score<40) {
+            document.getElementById('result').innerHTML = 'failed';
+        } else if(score<60) {
+            document.getElementById('result').innerHTML = 'passed';
+        } else if(score<70) {
+            document.getElementById('result').innerHTML = 'received a credit pass';
+        } else if(score<=100){
+            document.getElementById('result').innerHTML = 'received a distinction';
+        } else {
+            document.getElementById('result').innerHTML = 'entered an invalid score';
+        }
+
+        console.log('function end...');
+        }
+    </script>
+</head>
+<body>
+    <h1>simple-score-grading</h1>
+    <!-- create a textfield for mark entry, a button for grade checking, a label for result -->
+     <label>score: </label>
+     <input type="text" id="score" />
+     <hr>
+     <button onclick="check_result();">check</button>
+     <hr>
+     <label>you have <span id="result">-</span></label>
+</body>
+</html>
