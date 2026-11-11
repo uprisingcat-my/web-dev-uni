@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        // 2d Arrays - a collection of arrays.
+        function run() {
+            const numbers = [
+                [28, 38, 17],
+                [67, 11, 86],
+                [56, 33, 27]
+            ];
+            
+            // console.log(numbers[0][0]); // 28
+            // console.log(numbers[0][1]); // 38
+            // console.log(numbers[2][1]); // 33
+            let row=0;
+            while(row<3) {
+                let col = 0;
+                while(col<3) {
+                    console.log(numbers[row][col]);
+                    col++;
+                }
+                row++;
+            }
+            // numbers.map(item => item.map(tem => console.log(tem)));
+            numbers.forEach(item => item.forEach(tem => console.log(tem)));
+            // .map creates an array and .forEach will not.
+        }
+    </script>
+</head>
+<body>
+    <button onclick="run();">click</button>
+</body>
+</html>
