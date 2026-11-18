@@ -33,9 +33,28 @@
                 row++;
             }
             document.querySelector("#results").innerHTML = "<table border =20>" + rowEntries + "</table>";
-            // numbers.map(item => item.map(tem => console.log(tem)));
+            // numbers.map(item => item.map(tem => ));
             // numbers.forEach(item => item.forEach(tem => console.log(tem)));
             // .map creates an array and .forEach will not.
+
+            const div = document.querySelector("#results");
+            const table = document.createElement("table");
+            table.border = 30;
+            // const rowEntry = document.createElement("tr");
+            // const colEntry = document.createElement("td");
+
+
+            //using mapping
+            numbers.forEach((rowItem) => {
+                const rowEntry = document.createElement("tr");
+                rowItem.forEach((colItem) => {
+                    const colEntry = document.createElement("td");
+                    colEntry.textContent = colItem;
+                    rowEntry.appendChild(colEntry);
+                });
+                table.appendChild(rowEntry);
+            });
+            div.appendChild(table);
         }
     </script>
 </head>
