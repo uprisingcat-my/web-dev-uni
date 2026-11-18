@@ -17,21 +17,49 @@
             // console.log(numbers[0][1]); // 38
             // console.log(numbers[2][1]); // 33
             let row=0;
+            let colEntries="";
+            let rowEntries="";
+            //otherwise this will concatanate date as undefined + data + data
             while(row<3) {
+                colEntries = "";
                 let col = 0;
                 while(col<3) {
                     console.log(numbers[row][col]);
+                    colEntries += "<td>"+numbers[row][col]+"</td>"
                     col++;
                 }
+                rowEntries +=  "<tr>" + colEntries + "</tr>"
+                
                 row++;
             }
+            document.querySelector("#results").innerHTML = "<table border =20>" + rowEntries + "</table>";
             // numbers.map(item => item.map(tem => console.log(tem)));
-            numbers.forEach(item => item.forEach(tem => console.log(tem)));
+            // numbers.forEach(item => item.forEach(tem => console.log(tem)));
             // .map creates an array and .forEach will not.
         }
     </script>
 </head>
 <body>
     <button onclick="run();">click</button>
+    <!-- htmlcode to show a table -->
+     <div id="results">
+        <!-- <table border=10>
+            <tr>
+                <td>28</td>
+                <td>38</td>
+                <td>17</td>
+            </tr>
+            <tr>
+                <td>67</td>
+                <td>11</td>
+                <td>86</td>
+            </tr>
+            <tr>
+                <td>56</td>
+                <td>33</td>
+                <td>27</td>
+            </tr>
+        </table> -->
+     </div>
 </body>
 </html>
