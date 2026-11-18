@@ -40,18 +40,31 @@
             const div = document.querySelector("#results");
             const table = document.createElement("table");
             table.border = 30;
+            const tableHeaderData = document.createElement("th");
+            tableHeaderData.colSpan =3;
+            tableHeaderData.textContent ="Data";
+            const tableHeaderSubTotal = document.createElement("th");
+            tableHeaderSubTotal.textContent="Subtotal";
+            table.appendChild(tableHeaderData);
+            table.appendChild(tableHeaderSubTotal);
             // const rowEntry = document.createElement("tr");
             // const colEntry = document.createElement("td");
 
 
             //using mapping
             numbers.forEach((rowItem) => {
+                let subTot = 0;
                 const rowEntry = document.createElement("tr");
                 rowItem.forEach((colItem) => {
                     const colEntry = document.createElement("td");
                     colEntry.textContent = colItem;
                     rowEntry.appendChild(colEntry);
+                    subTot += colItem;
                 });
+                const subTotData = document.createElement("td");
+                subTotData.textContent = subTot;
+                subTotData.align = "right";
+                rowEntry.appendChild(subTotData);
                 table.appendChild(rowEntry);
             });
             div.appendChild(table);
